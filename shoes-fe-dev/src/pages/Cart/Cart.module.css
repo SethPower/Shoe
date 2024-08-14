@@ -1,0 +1,185 @@
+.contentCart {
+    width: 100%;
+}
+
+.contentCart table {
+    border-color: #ddd;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+.contentCart thead {
+    background: #f7f7f7;
+    color: #222;
+}
+.contentCart table thead tr th {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: medium none;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.contentCart table tbody tr td {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+.proImg {
+    width: 130px;
+}
+.proDetail {
+    width: 270px;
+}
+.proPrice {
+    width: 130px;
+}
+.proQnt {
+    width: 180px;
+}
+
+.proRemove {
+    width: 150px;
+}
+.proIcon {
+    transition: color ease 0.2s;
+    cursor: pointer;
+}
+.proIcon:hover {
+    color: var(--primary);
+}
+.actionCart {
+    display: flex;
+}
+.clearCart {
+    margin: 0 20px;
+}
+.contShop,
+.clearCart {
+    color: var(--black);
+    text-align: center;
+    border: 1px solid var(--primary);
+    width: 20%;
+    margin-top: 30px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.contShop:hover,
+.clearCart:hover {
+    font-weight: 800;
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.qntPro {
+    margin-right: 20px;
+}
+
+.qntAction {
+    display: flex;
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    justify-content: space-around;
+}
+.qntTitle {
+    font-weight: 700;
+    margin-right: 10px;
+    padding: 4px 0;
+}
+.qntDecre {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.qntIncre {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.qnt {
+    text-align: center;
+    width: 30px;
+}
+.qntIncre,
+.qnt,
+.qntDecre {
+    height: 100%;
+    padding: 4px 10px;
+    cursor: pointer;
+    user-select: none;
+}
+.qntIncre:active,
+.qntDecre:active {
+    background-color: #f5f5f5;
+}
+
+.totalCart {
+    float: right;
+    padding: 20px;
+    border: 10px solid #8b8a8a;
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contShop,
+    .clearCart {
+        margin-top: 10px;
+        width: 32%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .contentCart table,
+    .contentCart thead,
+    .contentCart tbody,
+    .contentCart th,
+    .contentCart td,
+    .contentCart tr {
+        display: block;
+    }
+    .contentCart tr {
+        border-bottom: 1px solid #ccc;
+    }
+    .contentCart thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .contentCart table tbody tr td {
+        width: auto;
+        max-width: 100%;
+        min-width: 100%;
+        text-align: center;
+        border-bottom: 0px solid #ddd;
+    }
+    .actionCart {
+        flex-direction: column;
+    }
+
+    .clearCart {
+        margin: 0;
+    }
+    .contShop,
+    .clearCart {
+        background-color: var(--primary);
+        color: #fff;
+        width: 100%;
+    }
+    .totalCart {
+        text-align: center;
+        width: 100%;
+    }
+}

@@ -1,0 +1,451 @@
+/* Animation */
+@keyframes test {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrapper {
+    width: 100%;
+}
+.wrapperTop {
+    padding: 14px 40px;
+}
+
+.wrapperBottom.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 10px;
+    z-index: 8;
+    animation: test 0.4s linear;
+}
+.wrapperTop,
+.wrapperBottom {
+    border-bottom: 1px solid var(--color-border);
+}
+.title {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.main {
+    display: flex;
+}
+
+.logo img {
+    max-width: 120px;
+}
+.mainLeft {
+    width: calc(100% / 6);
+    padding-right: 20px;
+}
+.mainCenter {
+    width: calc(100% / 3);
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+.product {
+    position: relative;
+}
+.productItem {
+    position: absolute;
+}
+.product,
+.home {
+    padding: 20px 40px;
+    margin: 0 30px;
+    transition: all 0.2s linear;
+}
+.home:hover,
+.product:hover {
+    color: var(--color-hover);
+}
+
+.mainRight {
+    width: calc(100% / 2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search {
+    width: 90%;
+    height: 46px;
+    margin-left: 40px;
+}
+.searchForm {
+    position: relative;
+    height: 100%;
+}
+.searchInput {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: 57px;
+    position: absolute;
+    height: 100%;
+    padding-left: 30px;
+    background-color: transparent;
+    font-size: 1.4rem;
+}
+.searchInput:focus {
+    border-color: #ccc;
+}
+.searchIcon {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    font-size: 1.8rem;
+}
+.search-result {
+    margin-top: 5px;
+    overflow: scrollY;
+    overflow-y: auto;
+    max-height: 400px;
+    /* height: 400px; */
+    box-shadow: 3px 2px 4px #d7d7d7;
+    z-index: 2;
+    position: absolute;
+    background-color: #fff;
+    width: 400px;
+}
+.user {
+    padding: 0 10px;
+    margin: 0 10px;
+    font-size: 2.6rem;
+}
+.user a {
+    transition: all 0.2s linear;
+}
+.user a:hover {
+    color: var(--color-hover);
+}
+
+.cart {
+    position: relative;
+    font-size: 2.6rem;
+    transition: 0.2s all linear;
+    cursor: pointer;
+    padding: 0 10px;
+}
+.cart:hover {
+    color: var(--color-hover);
+}
+.loggout {
+    padding: 0 10px;
+    margin-left: 10px;
+    font-size: 2.6rem;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+.loggout:hover {
+    color: var(--color-hover);
+}
+.login {
+    margin-left: 20px;
+    background-color: var(--primary);
+    height: 40%;
+    border-radius: 4px;
+    border: transparent;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.login:hover {
+    background-color: rgb(206, 28, 69);
+}
+
+.mainRight .login a {
+    color: var(--white);
+    width: 100%;
+    padding: 12px 22px;
+    height: 100%;
+}
+.count {
+    position: absolute;
+    right: -8%;
+    top: -6px;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 4px;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    background: #f53737;
+    color: #fff;
+}
+
+/* Cart View Detail */
+.viewCart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    transition: 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.viewCart .overlay {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: '';
+    background-color: #00000080;
+}
+
+.cartWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    max-width: 375px;
+    background-color: var(--white);
+    padding: 50px 20px;
+}
+.btnClose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-size: 3rem;
+    background-color: #f53737;
+
+    cursor: pointer;
+}
+.btnCloseIcon {
+    display: block;
+    line-height: 5rem;
+}
+
+.cartPro {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 20px;
+    display: flex;
+}
+.cartProImg {
+    max-width: 85px;
+}
+.cartDesc {
+    padding: 0 10px;
+    max-width: calc(100% - 115px);
+    flex-basis: calc(100% - 115px);
+}
+.cartName {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+.cartProAction {
+    max-width: 30px;
+    flex-basis: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1;
+    color: #222;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+.cartProAction:hover {
+    color: var(--color-hover);
+}
+.cartQnt {
+    display: flex;
+    font-size: 12px;
+    line-height: 1;
+}
+.qnt {
+    color: #555;
+    margin-right: 4px;
+}
+.price {
+    color: #f53737;
+    margin-left: 4px;
+}
+
+.cartTotal {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 20px;
+}
+.totalTitle,
+.priceTotal {
+    font-size: 1.6rem;
+    color: #222;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.cartAction {
+    display: flex;
+    flex-direction: column;
+}
+.toViewCart,
+.toCheckOut {
+    display: block;
+    padding: 18px 0;
+    font-size: 1.4rem;
+    color: #222;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: 6px;
+    background-color: #f3f3f3;
+    border-radius: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: all 0.2s linear;
+}
+.iconAction {
+    margin-right: 4px;
+}
+.toViewCart:hover,
+.toCheckOut:hover {
+    background-color: var(--color-hover);
+    color: #fff;
+    font-size: 1.6rem;
+}
+.notProductInCart {
+    font-size: 2.6rem;
+    font-weight: 600;
+    padding: 20px 0;
+}
+.showSearch {
+    padding: 8px;
+}
+
+/* Responsive */
+/* Tablet */
+@media (min-width: 1024px) {
+    .mobileVersion {
+        display: none;
+    }
+}
+@media (max-width: 1024px) {
+    .mainCenter,
+    .loggout,
+    .search,
+    .wrapperTop {
+        display: none;
+    }
+    .cartWrapper {
+        width: 70%;
+    }
+    .wrapperBottom {
+        padding: 0;
+    }
+    .main {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mainLeft {
+        width: 40%;
+    }
+    .mainRight {
+        height: 88px;
+    }
+    .mobileVersion {
+        position: relative;
+        cursor: pointer;
+        padding: 20px 10px;
+    }
+    .viewMenuMobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 10;
+        transition: 0.4s;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .iconMobile {
+        font-size: 2.6rem;
+    }
+    .viewMenuMobile .overlayMobile {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        content: '';
+        background-color: #00000080;
+    }
+    .menuWrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        max-width: 375px;
+        background-color: var(--white);
+        padding: 50px 20px;
+    }
+    .searchMobile {
+        margin-bottom: 20px;
+    }
+    .inputMobile {
+        width: 100%;
+        border: 1px solid #f1f1f1;
+        border-radius: 4px;
+        padding: 8px 4px;
+        font-size: 1.6rem;
+    }
+    .inputMobile:focus {
+        border: 1px solid #ccc;
+    }
+    .productMobile,
+    .logoutMobile {
+        padding: 8px 0;
+    }
+    .productMobile:active,
+    .logoutMobile:active {
+        color: var(--primary);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menuWrapper {
+        width: 70%;
+    }
+    .content {
+        position: relative;
+        width: 100%;
+    }
+    .iconMobile {
+        display: block;
+    }
+    .search-result {
+        width: 90%;
+    }
+    .mainRight {
+        height: 88px;
+    }
+}
